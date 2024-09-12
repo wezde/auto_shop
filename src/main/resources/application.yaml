@@ -1,1 +1,21 @@
-spring.application.name=auto_shop
+spring:
+  application:
+    name: auto_shop
+
+  data:
+    jpa:
+      repositories:
+        enabled: true
+  jpa:
+    database: postgresql
+    show-sql: true
+    properties:
+      hibernate:
+        ddl-auto: validate
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    hikari:
+      username: postgres
+      password: postgres
+      driver-class-name: org.postgresql.Driver
+
